@@ -24,7 +24,7 @@ Maps dont provide us the following option and that becomes our **"Problems to So
 - [X] *Reason for the Jams: If there is a jam because of bad road(s) / due to repair work/ say some vehicle Stranded*
 - [X] *It cant give information regarding say the engine vibrations* 
 - [X] *Also it cant give information regarding say, the tyre's abnormality due to long usage*
-- [ ] *Analytics over localized data (and would be more accurate)*
+- [X] *Analytics over localized data (and would be more accurate)*
   - *Automatic feeding of the data by several vehicles into dynamic database(to be updated by each passing vehicle)*
   - *Future usage of this data by other vehicles, who have chosen this path*
   
@@ -32,11 +32,17 @@ Maps dont provide us the following option and that becomes our **"Problems to So
 ## Implementation Details 
 
 The proposal here is two folds 
-1) Attach sensors to the moving parts of the vehicle 
-2) 
+1) Attach Accelerometers to the moving parts of the vehicle (front engine/wheels and/or rear wheels)
+2) Attach a GPS Module to the vehicle ideally towards one center of the vehicle
 
-**Here the data collection source is not the Mobile Phone but the real Sensors connected to the User's vehicle **
-**Data collection at source is REALTIME and once accurately available, it is used offline by all users without even participating in the overall collection** 
+The configuration of the devices are as below => 
+
+
+
+
+
+
+**Here the data collection source is not the Mobile Phone but the real Sensors connected to the User's vehicle. Data collection at source is REALTIME and once accurately available, it is used offline by all users without even   participating in the overall collection** 
 
 
 
@@ -83,3 +89,6 @@ The proposal here is two folds
 
 
 
+
+**Here the data collection source is not the Mobile Phone but the real Sensors connected to the User's vehicle **
+**Data collection at source is REALTIME and once accurately available, it is used offline by all users without even participating in the overall collection** 
