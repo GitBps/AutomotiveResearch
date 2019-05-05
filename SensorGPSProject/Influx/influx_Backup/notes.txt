@@ -1,0 +1,1 @@
+intel@intel-VJS131:/usr/lib/python3/dist-packages$ sudo  /usr/bin/python3 /home/intel/Ph/rspi/influx/push.py

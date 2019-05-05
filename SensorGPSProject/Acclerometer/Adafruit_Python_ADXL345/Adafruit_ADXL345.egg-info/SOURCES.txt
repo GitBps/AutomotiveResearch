@@ -1,0 +1,9 @@
+README.md
+setup.py
+Adafruit_ADXL345/ADXL345.py
+Adafruit_ADXL345/__init__.py
+Adafruit_ADXL345.egg-info/PKG-INFO
+Adafruit_ADXL345.egg-info/SOURCES.txt
+Adafruit_ADXL345.egg-info/dependency_links.txt
+Adafruit_ADXL345.egg-info/requires.txt
+Adafruit_ADXL345.egg-info/top_level.txt
