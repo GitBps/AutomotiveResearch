@@ -64,7 +64,7 @@ Here the data collection source is not the Mobile Phone but the real Sensors con
 
 ## Basic Setup and Working Details (How it is implemented)
 
-a) **ACCELEROMETER: **As seen in the previous sections, there are sensor data which will be typically a short string format of 30 odd bytes and is coming at a frequency of every **500ms**. 
+a) **ACCELEROMETER:** As seen in the previous sections, there are sensor data which will be typically a short string format of 30 odd bytes and is coming at a frequency of every **500ms**. 
 
 - This looks something like this for each sensor **<SensorId = Id, X = x, Y = y, Z = z>**
 - For each sensor ID the data would be the **absolute** displacement of the **X, Y, Z** coordintes.
@@ -85,11 +85,40 @@ b) **GPGGA GPS LOCATION FIX:** There is also a GPS Data coming to the Sensor Dev
 
 Each string has its own significance. But for the location details we need to parse the Latitude and Longitudes and convert them into the exact geolocations with negative and positive directions into considerations from the **GPGGA** String which comes in every Second. 
 
+**GPGGA** string is parsed as shown in the below diagram for the details before handing that over to the Database and Grafanna for viewing.
+
 <img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/FunctionalBlock2.png >
 
 
+## Challenge: Synchronization between various Nodes and GPS Module
 
-## COLLECTOR 
+Lets look at the proposals below to see the problem statement.
+
+- **Proposal 1:** All devices publish their **data strings** directly to the **cloud**
+  - PROS:
+    - Easy design, easy implementation 
+    - No dependency on any central device to collect, process, and publish
+  - CONS:
+    - No Synchronization of the frames, and @Database, frames would reach out of time
+    - Lack of serialization
+    - Network Delays could cause further issues, of wrong packets etc.
+  
+- **Proposal 2:** Since all sensors have an IP, and the **Central Service** module is one which has Cloud connectivity it can manage much better all the data packets arriving from all sensors.
+  - PROS:
+    - Data fully Serialized 
+    - Network Latencies can now be **DETECTED** (Proposal below) and out of time frames to be dropped to avoid wrong data
+    - Latencies can be corrected before sending to the DB
+    - A **Synchronization** Method is proposed below, and is **under implementation**    
+  - CONS: 
+    - Central server needs to process all packets quite fast.
+    - Measures to avoid Data corruption need be applied.
+
+
+
+
+
+As explained in previous sections, since there are more than 5 differnet sensors here, who are all connected to the IP network and is pumping data strings every 500ms and 1 second respectively. On top of that there are network latencies and there are high amount of chances that if one of the network is delayed,  
+
 
 
 
