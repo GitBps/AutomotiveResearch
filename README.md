@@ -64,39 +64,45 @@ Here the data collection source is not the Mobile Phone but the real Sensors con
 
 ## Basic Setup and Working Details (How it is implemented)
 
-a) As seen in the previous sections, there are sensor data which will be typically a short string format of 30 odd bytes and is coming at a frequency of every **500ms**. 
+a) **ACCELEROMETER: **As seen in the previous sections, there are sensor data which will be typically a short string format of 30 odd bytes and is coming at a frequency of every **500ms**. 
 
-- This looks something like this for each sensor 
-  - <SensorId = Id, X = x, Y = y, Z = z>
-- For each sensor ID the data would be the absolute displacement of the X, Y, Z coordintes.
+- This looks something like this for each sensor **<SensorId = Id, X = x, Y = y, Z = z>**
+- For each sensor ID the data would be the **absolute** displacement of the **X, Y, Z** coordintes.
 - We prepend the sendor id to the coordinates so that we can distinguish the data came from which Sensor.
 
-**Sensor data would not be plotted as it is, but rather be plotted only after Callibration and the time we updated the last coordinate** 
+**Sensor data would not be plotted as it is, but rather be plotted only after Callibration and the time we updated the last coordinate**. This is explained in the **Callibration section** below
 
-b) There is also a GPS Data coming to the Sensor Device every **1 second** and it contains atleast 9-10 strings carrying the following data strings 
+b) **GPGGA GPS LOCATION FIX:** There is also a GPS Data coming to the Sensor Device every **1 second** and it contains atleast 9-10 strings carrying the following data strings 
 
-$GPRMC,134809.00,A,1254.29859,N,07738.82074,E,0.178,,300419,,,A*79
-$GPVTG,,T,,M,0.178,N,0.330,K,A*2D
-**$GPGGA,134809.00,1254.29859,N,07738.82074,E,1,03,2.94,940.5,M,-86.6,M,,*75**
-$GPGSA,A,2,12,05,25,,,,,,,,,,3.11,2.94,1.00*0F
-$GPGSV,3,1,11,02,28,029,16,05,63,034,39,06,01,056,17,12,74,245,25*74
-$GPGSV,3,2,11,13,24,138,,15,23,176,18,19,12,105,08,21,05,268,*77
-$GPGSV,3,3,11,24,15,205,09,25,44,306,19,29,19,329,*44
-$GPGLL,1254.29859,N,07738.82074,E,134809.00,A,A*61
+ - $GPRMC,134809.00,A,1254.29859,N,07738.82074,E,0.178,,300419,,,A*79
+ - $GPVTG,,T,,M,0.178,N,0.330,K,A*2D
+ - $GPGGA,134809.00,1254.29859,N,07738.82074,E,1,03,2.94,940.5,M,-86.6,M,,*75**
+ - $GPGSA,A,2,12,05,25,,,,,,,,,,3.11,2.94,1.00*0F
+ - $GPGSV,3,1,11,02,28,029,16,05,63,034,39,06,01,056,17,12,74,245,25*74
+ - $GPGSV,3,2,11,13,24,138,,15,23,176,18,19,12,105,08,21,05,268,*77
+ - $GPGSV,3,3,11,24,15,205,09,25,44,306,19,29,19,329,*44
+ - $GPGLL,1254.29859,N,07738.82074,E,134809.00,A,A*61
 
-Each string has its own significance. 
+Each string has its own significance. But for the location details we need to parse the Latitude and Longitudes and convert them into the exact geolocations with negative and positive directions into considerations from the **GPGGA** String which comes in every Second. 
 
-### Detection of Network Latencies
+<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/FunctionalBlock2.png >
+
+
+
+## COLLECTOR 
+
+
+
+## Acclerometer Data Callibration/Fine tuning
+
+
+
+## Detection of Network Latencies
 
 The above collection of data is sent out every second (**almost accurately**) and reaches the **Central Controller** with some network and processing latency. 
 
 **Considering the GPS Clocks coming as PPS every second (Measured accurately), we are planning to use it as a SYNCHRONIZATION MECHANISM for any out of time packets at the central service. **
 
-
-<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/FunctionalBlock2.png >
-
-
-### Acclerometer Data Callibration/Fine tuning
 
 
 
