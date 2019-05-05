@@ -39,18 +39,9 @@ The proposal here is divided into the following Functional details
 The configuration of the devices are as below => 
 <img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/OverallFunctionalDiagram.png >
 
+Here the data collection source is not the Mobile Phone but the real Sensors connected to the User's vehicle.Data collection at source is REALTIME and once accurately available, it is used offline by all users without even participating in the overall collection. In that way it is a first hand information available directly from the hardware sources.
 
-
-
-
-**Here the data collection source is not the Mobile Phone but the real Sensors connected to the User's vehicle. Data collection at source is REALTIME and once accurately available, it is used offline by all users without even   participating in the overall collection** 
-
-
-
-
-
-
-## Tools and technologies
+## Tools and technologies used
 
 ### Hardware tools
 
@@ -64,17 +55,14 @@ The configuration of the devices are as below =>
 
 **GPS module**: GPS module is used to detect the Latitude and Longitude of any location with exact time. It sends data related to tracking position in real time in NMEA format.
 
-
 ### Software tools
 
-**InfluxDB**: It is an open source database optimized for fast, high-availability storage and retrieval of time series data. In our case, all the sensor data is stored in InfluxDB in real time. ***...--->(Please clarify this: in the cloud? Or PC?)***
+**InfluxDB**: It is an open source database optimized for fast, high-availability storage and retrieval of time series data. In our case, all the sensor data is stored in InfluxDB in real time.
 
 **Grafana Labs**: It is an analytics tool that allows to query, visualize and understand any metrics from the stored data. In our case, we used Grafana to plot the time-series data and the geolocation of the anomalies in time-series data from InfluxDB in the inbuilt mapping tool for visualization.
 
-## Issues
-- System is not completely real time in the sense that a driver may not get terrain information immediately when an anomaly is encountered.
-- Speed of vehicles should not very high else we won’t be able to poll the sensor data correctly.
-- More the number of sensor, more difficult it is to sync data from all of them.***Please clarify if this point is valid or not***
+
+## Basic Setup and Working Details (How it is implemented)
 
 
 
@@ -85,11 +73,3 @@ The configuration of the devices are as below =>
 
 
 
-
-
-
-
-
-
-**Here the data collection source is not the Mobile Phone but the real Sensors connected to the User's vehicle **
-**Data collection at source is REALTIME and once accurately available, it is used offline by all users without even participating in the overall collection** 
