@@ -140,17 +140,22 @@ the Collector does a fair job in collecting published data, filters, and process
 
 **Again Filter Criteria is subject to change based on how sensitive the Accelerometer data is requested**
 
+<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/S1_S2_GPGGA.png >
+
+
+### S1/S2 Moves, GPS criteria met, then its plotted.
+
 <img src = xx >
 
 
-### S1/S2 Moves, and if filter criteria met, its plotted.
 
-<img src = xx >
+### Pulling Data from History 
 
+Grafana has an inbuilt support for Influx connections, and due to that the committed data can be pulled back and plotted anytime. Data as old as 5 years could also be plotted. 
 
+See below the configuration settings from Grafana
 
-
-
+<img src = xx>
 
 
 
