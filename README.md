@@ -37,7 +37,7 @@ The proposal here is divided into the following Functional details
 3) Create a local IP Network between these devices and the end router with NW Upload capability
 
 The configuration of the devices are as below => 
-
+<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/OverallFunctionalDiagram.png >
 
 
 
