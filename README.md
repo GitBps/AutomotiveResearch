@@ -13,20 +13,20 @@ Maps provides us the options like
 
 This is all based on the data avaialble at the given time on the servers, and also due to the maps uploading the information from User's phone to the servers. The data is from the phones, and if the user dont use phones, there is no way to understand the live data. 
 
-**But what maps doesnt provide us today is the road condition - as in, it doesnt let us select the road based on Road Conditions- and this is the basis of the current literature** 
+**But what maps doesnt provide us today is the road condition - as in, it doesnt let us select the road based on road conditions- and this is the basis of the current literature** 
 
 
 ## Problem Statement 
 
 Maps dont provide us the following option and that becomes our **"Problems to Solve"**
 
-- [X] *Road conditions (like the bumps,holes,roads torn due to repairs)
-- [X] *Reason for the Jams: If there is a jam because of bad road(s) / due to repair work/ say some vehicle Stranded
-- [X] *It cant give information regarding say the engine vibrations 
-- [X] *Also it cant give information regarding say, the tyre's abnormality due to long usage
-- [X] *Analytics over localized data (and would be more accurate)
-  - *Automatic feeding of the data by several vehicles into dynamic database(to be updated by each passing vehicle)
-  - *Future usage of this data by other vehicles, who have chosen this path
+- [X] *Road conditions (like the bumps,holes,roads torn due to repairs)*
+- [X] *Reason for the Jams: If there is a jam because of bad road(s) / due to repair work/ say some vehicle Stranded*
+- [X] *It cant give information regarding say the engine vibrations* 
+- [X] *Also it cant give information regarding say, the tyre's abnormality due to long usage*
+- [X] *Analytics over localized data (and would be more accurate)*
+  - *Automatic feeding of the data by several vehicles into dynamic database(to be updated by each passing vehicle)*
+  - *Future usage of this data by other vehicles, who have chosen this path*
   
 
 
