@@ -143,13 +143,29 @@ the Collector does a fair job in collecting published data, filters, and process
 
 ### S1/S2 Moves, GPS criteria met, then its plotted.
 
-<img src =  >
+1) Data coming from only 3 sensors 
+
+The below is data from only sensors, plotted against the Influx timeline. this is plotted on real time as this arrives and meets the filter criteria. 
+
+<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/OnlySensors.png>
 
 
-<img src =  >
+2) Real time data from slow moving device in a small area to check for the accuracy of data in small intervals and with small population using this technology. 
+
+**Data was accurately Published**
+
+<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/integratedRealtime1.png >
 
 
-<img src =  >
+3) When multiple users start to use this technique, then the data available would be much more consistent with reality. 
+More over, as seen below the data is last 12 hrs of movement of device in places, and monitored several jerks at the locations plotted. 
+As and when these locations are filled or repared, they would start to disappear
+And data would be good for some of the **Future** users in time.
+
+<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/PlotsLast12Hrs_1.png >
+
+Another example of moving vehicle hitting 2+ disturbed areas and detected and plotted.
+<img src =  https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/2Mapdots.png >
 
 ### Pulling Data from History 
 
@@ -159,8 +175,7 @@ See below the configuration settings from Grafana
 
 <img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/GrafanaRefreshOption.png >
 
-
-### FreeRunning Accelerometers - Vehicle Health Detection
+### FreeRunning Accelerometers - For Vehicle Health Detection
 
 - This experiment could also be used to detect the health of the running vehicle - due to extra amounts of **Vibrations** from either the engine or the wheels. 
 - Having known the baseline data, that the roads are good at a given location say in the given plots, then it can be clearly figured out that there is some wearing in the engine. 
