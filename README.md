@@ -95,38 +95,72 @@ Each string has its own significance. But for the location details we need to pa
 Lets look at the proposals below to see the problem statement.
 
 - **Proposal 1:** All devices publish their **data strings** directly to the **cloud**
-  - PROS:
+  - **PROS:**
     - Easy design, easy implementation 
     - No dependency on any central device to collect, process, and publish
-  - CONS:
+  - **CONS:**
     - No Synchronization of the frames, and @Database, frames would reach out of time
     - Lack of serialization
     - Network Delays could cause further issues, of wrong packets etc.
-  
+
+<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/LayoutProposal_1.png >
+
+Proposal 1 looks easier but has serious drawbacks in terms of impact of data being plotted. 
+
+
 - **Proposal 2:** Since all sensors have an IP, and the **Central Service** module is one which has Cloud connectivity it can manage much better all the data packets arriving from all sensors.
-  - PROS:
+  - **PROS:**
     - Data fully Serialized 
+    - Data processed more in the real time, Neglecting the Network Latencies.
     - Network Latencies can now be **DETECTED** (Proposal below) and out of time frames to be dropped to avoid wrong data
     - Latencies can be corrected before sending to the DB
-    - A **Synchronization** Method is proposed below, and is **under implementation**    
-  - CONS: 
+    - A **Correction baed on time synchronization** Method is proposed below, and is **under implementation**
+      (proposed in next section)
+  - **CONS:** 
     - Central server needs to process all packets quite fast.
     - Measures to avoid Data corruption need be applied.
 
+Proposal 2 looks promising as seen from the implementation perspective. This is the chosen implementation.
+
+
+
+## Acclerometer/GPS Data Callibration and Filtering
+
+Need flow charts here
+
+## Working Screenshots and DEMO
+
+### S1 data + S2 Data + GPGGA Processed by Central Server
+
+- Central server processing the data as received from the 2 sensors and the GPS Module.
+- It does the **calibration and filters out** the measurements and then sends out the packet to influx
+
+As seen in below image, this is a very fine tuned and callibrated details of sensor movements.
+the Collector does a fair job in collecting published data, filters, and processes if filter criteria is met.
+
+**Again Filter Criteria is subject to change based on how sensitive the Accelerometer data is requested**
+
+<img src = xx >
+
+
+### S1/S2 Moves, and if filter criteria met, its plotted.
+
+<img src = xx >
 
 
 
 
-As explained in previous sections, since there are more than 5 differnet sensors here, who are all connected to the IP network and is pumping data strings every 500ms and 1 second respectively. On top of that there are network latencies and there are high amount of chances that if one of the network is delayed,  
 
 
 
 
-## Acclerometer Data Callibration/Fine tuning
 
+## Detection & Correction Proposal for Network Latencies
 
+**Problem Statement:** As explained in previous sections, since there are more than 5 differnet sensors here, who are all connected to the IP network and are pumping data strings every 500ms and 1 second respectively. 
 
-## Detection of Network Latencies
+On top of that there are network latencies and there are high amount of chances that if one of the network is delayed, data received would loose its real-timeliness and then be going wrongly.
+
 
 The above collection of data is sent out every second (**almost accurately**) and reaches the **Central Controller** with some network and processing latency. 
 
