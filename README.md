@@ -124,7 +124,12 @@ Proposal 2 looks promising as seen from the implementation perspective. This is 
 
 ## Acclerometer/GPS Data Callibration and Filtering
 
-Need flow charts here
+- In general as seen in the setup the Accelerometer in discussion is a sensitive device and hence would generally **flood the database** if not filtered properly.
+- Also noticed that during an upjerk or a downjerk, there would be multiple **INTERRUPTs from I2C** since the UP-DOWN cycle may take more than 500ms or sometimes even a second, **depending on the speed of the vehicle**
+- GPS Sensor must show a dot on the map only if the such interrupt (as seen above) could be distintly counted and a sense of **time delta** from the last GPS Projection is done.
+
+following is the flow, for both sensor and GPS to apply **Decided FILTERS**
+<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/FlowChartFineTuning.png>
 
 ## Working Screenshots and DEMO
 
