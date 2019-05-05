@@ -31,9 +31,10 @@ Maps dont provide us the following option and that becomes our **"Problems to So
 
 ## Implementation Details 
 
-The proposal here is two folds 
+The proposal here is divided into the following Functional details  
 1) Attach Accelerometers to the moving parts of the vehicle (front engine/wheels and/or rear wheels)
 2) Attach a GPS Module to the vehicle ideally towards one center of the vehicle
+3) Create a local IP Network between these devices and the end router with NW Upload capability
 
 The configuration of the devices are as below => 
 
