@@ -25,7 +25,7 @@ Maps dont provide us the following option and that becomes our **"Problems to So
 - [X] It cant give information regarding say the engine vibrations 
 - [X] Also it cant give information regarding say, the tyre's abnormality due to long usage
 - [X] Analytics over localized data (and would be more accurate)
-  - Automatic feeding of the data by several vehicles into the dynamic database (being updated by each passing vehicle)
+  - Automatic feeding of the data by several vehicles into dynamic database(to be updated by each passing vehicle)
   - Future usage of this data by other vehicles, who have chosen this path
   
 
