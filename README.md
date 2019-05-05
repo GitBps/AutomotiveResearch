@@ -122,8 +122,6 @@ Proposal 1 looks easier but has serious drawbacks in terms of impact of data bei
 
 Proposal 2 looks promising as seen from the implementation perspective. This is the chosen implementation.
 
-
-
 ## Acclerometer/GPS Data Callibration and Filtering
 
 Need flow charts here
@@ -145,9 +143,13 @@ the Collector does a fair job in collecting published data, filters, and process
 
 ### S1/S2 Moves, GPS criteria met, then its plotted.
 
-<img src = xx >
+<img src =  >
 
 
+<img src =  >
+
+
+<img src =  >
 
 ### Pulling Data from History 
 
@@ -155,9 +157,16 @@ Grafana has an inbuilt support for Influx connections, and due to that the commi
 
 See below the configuration settings from Grafana
 
-<img src = xx>
+<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/GrafanaRefreshOption.png >
 
 
+### FreeRunning Accelerometers - Vehicle Health Detection
+
+- This experiment could also be used to detect the health of the running vehicle - due to extra amounts of **Vibrations** from either the engine or the wheels. 
+- Having known the baseline data, that the roads are good at a given location say in the given plots, then it can be clearly figured out that there is some wearing in the engine. 
+- Moreover the data can be compared with historical data from same locations, to evaluate if there is a **degradation**
+
+<img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/FreeRunningWheelOrVibrationDetected.png>
 
 
 ## Detection & Correction Proposal for Network Latencies
