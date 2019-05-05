@@ -1,4 +1,4 @@
-#				Automotive Research and Analytics 
+#				Automotive Research and Analysis 
 ##		Method and Apparatus to analyzing Road Quality
 
 ## Background
@@ -201,9 +201,17 @@ The above collection of data is sent out every second (**almost accurately**) an
 **Considering the GPS Clocks coming as PPS every second (Measured accurately), we are planning to use it as a SYNCHRONIZATION MECHANISM for any out of time packets at the central service. **
 
 
+**TODO: MSC FLOW TO BE EXPLAINED ON BOARD**
+
+## Known Limitations and Remaining Tasks
+
+- Mostly Realtime, Latencies not seen > 15-20 ms with 2-3 sensors and GPS with FIX.
+- Network Latency could make things stale , things in above section to be implemented
+- Influx query to be deviced for getting the counter value of number of hits by several users at a given GEO location so that it could be marked bad or good automatically based on the co-relation with latest data.
+- Emulated S4 here - but even after emulation it was working fine. - to be tried with all 4 sensors- it may not really help though to that extent but still to complete
 
 
-
+#			End of the document
 
 
 
