@@ -68,13 +68,16 @@ a) As seen in the previous sections, there are sensor data which will be typical
 
 - This looks something like this for each sensor 
   - <SensorId = Id, X = x, Y = y, Z = z>
+- For each sensor ID the data would be the absolute displacement of the X, Y, Z coordintes.
+- We prepend the sendor id to the coordinates so that we can distinguish the data came from which Sensor.
 
+**Sensor data would not be plotted as it is, but rather be plotted only after Callibration and the time we updated the last coordinate** 
 
 b) There is also a GPS Data coming to the Sensor Device every **1 second** and it contains atleast 9-10 strings carrying the following data strings 
 
 - $GPRMC,134809.00,A,1254.29859,N,07738.82074,E,0.178,,300419,,,A*79
 - $GPVTG,,T,,M,0.178,N,0.330,K,A*2D
-- [X] **\$GPGGA,134809.00,1254.29859,N,07738.82074,E,1,03,2.94,940.5,M,-86.6,M,,*75**
+  **$GPGGA,134809.00,1254.29859,N,07738.82074,E,1,03,2.94,940.5,M,-86.6,M,,*75**
 - $GPGSA,A,2,12,05,25,,,,,,,,,,3.11,2.94,1.00*0F
 - $GPGSV,3,1,11,02,28,029,16,05,63,034,39,06,01,056,17,12,74,245,25*74
 - $GPGSV,3,2,11,13,24,138,,15,23,176,18,19,12,105,08,21,05,268,*77
@@ -91,6 +94,11 @@ The above collection of data is sent out every second (**almost accurately**) an
 
 
 <img src = https://github.com/GitBps/AutomotiveResearch/blob/master/SensorGPSProject/Snapshots/FunctionalBlock2.png >
+
+
+### Acclerometer Data Callibration/Fine tuning
+
+
 
 
 
