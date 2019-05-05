@@ -20,11 +20,11 @@ This is all based on the data avaialble at the given time on the servers, and al
 
 Maps dont provide us the following option and that becomes our **"Problems to Solve"**
 
-[x] Road conditions (like the bumps,holes,roads torn due to repairs)
-[x] Reason for the Jams: If there is a jam because of bad road(s) / due to repair work/ say some vehicle Stranded
-[x] It cant give information regarding say the engine vibrations 
+[X] Road conditions (like the bumps,holes,roads torn due to repairs)
+[X] Reason for the Jams: If there is a jam because of bad road(s) / due to repair work/ say some vehicle Stranded
+[X] It cant give information regarding say the engine vibrations 
 [x] Also it cant give information regarding say, the tyre's abnormality due to long usage
-[x] Analytics over localized data (and would be more accurate)
+[X] Analytics over localized data (and would be more accurate)
   - Automatic feeding of the data by several vehicles into the dynamic database (being updated by each passing vehicle)
   - Future usage of this data by other vehicles, who have chosen this path
   
