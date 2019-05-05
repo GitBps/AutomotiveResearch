@@ -16,6 +16,20 @@ This is all based on the data avaialble at the given time on the servers, and al
 **But what maps doesnt provide us today is the road condition - as in, it doesnt let us select the road based on Road Conditions- and this is the basis of the current literature** 
 
 
+## Problem Statement 
+
+Maps dont provide us the following option and that becomes our **Problems to Solve**
+
+- Road conditions (like the bumps,holes,roads torn due to repairs)
+- Reason for the Jams: If there is a jam because of bad road(s) / due to repair work/ say some vehicle Stranded
+- It cant give information regarding say the engine vibrations 
+- Also it cant give information regarding say, the tyre's abnormality due to long usage
+- Analytics over localized data (and would be more accurate)
+  - Automatic feeding of the data by several vehicles into the dynamic database (being updated by each passing vehicle)
+  - Future usage of this data by other vehicles, who have chosen this path
+
+
+
 
 
 
