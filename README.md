@@ -210,6 +210,20 @@ The above collection of data is sent out every second (**almost accurately**) an
 - Influx query to be deviced for getting the counter value of number of hits by several users at a given GEO location so that it could be marked bad or good automatically based on the co-relation with latest data.
 - **There is provision to add many more sensors this logic and many more use cases to be enabled with this as base** 
 
+## GIT Path to Source Code and Snapshots
+
+Full Source of Sensors, GPS, Central Server, Influx and Grafana details 
+<img src = https://github.com/GitBps/AutomotiveResearch >
+
+Grafana Hosted Dashboard 
+<img src = https://grafanasnap.grafana.net/d/s401nZiZk/balvinder_plotted_finally?orgId=1&from=now-12h&to=now >
+
+Influx + Python Programming Link
+<img src = https://www.influxdata.com/blog/getting-started-python-influxdb/ >
+
+Grafana Worldmap Panel
+<img src = https://github.com/grafana/worldmap-panel>
+
 
 #			End of the document
 
