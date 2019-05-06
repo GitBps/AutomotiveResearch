@@ -216,10 +216,10 @@ Full Source of Sensors, GPS, Central Server, Influx and Grafana details
 <img src = https://github.com/GitBps/AutomotiveResearch >
 
 Grafana Hosted Dashboard 
-<img src = https://grafanasnap.grafana.net/d/s401nZiZk/balvinder_plotted_finally?orgId=1&from=now-12h&to=now >
+<img src = https://grafanasnap.grafana.net/d/s401nZiZk/balvinder_plotted_finally?orgId=1&from=now-12h&to=now>
 
 Influx + Python Programming Link
-<img src = https://www.influxdata.com/blog/getting-started-python-influxdb/ >
+<img src = https://www.influxdata.com/blog/getting-started-python-influxdb>
 
 Grafana Worldmap Panel
 <img src = https://github.com/grafana/worldmap-panel>
